@@ -11,10 +11,7 @@ class BaseProvider(ABC):
     """
 
     @abstractmethod
-    async def chat(
-        self,
-        messages: List[Dict[str, str]]
-    ) -> Dict[str, Any]:
+    async def chat(self, messages: List[Dict[str, str]]) -> Dict[str, Any]:
         """
         Send messages to the AI model.
 

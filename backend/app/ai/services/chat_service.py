@@ -14,12 +14,8 @@ class ChatService:
 
         self.conversation.add_user(prompt)
 
-        response = await self.provider.chat(
-            self.conversation.history()
-        )
+        response = await self.provider.chat(self.conversation.history())
 
-        self.conversation.add_assistant(
-            response["text"]
-        )
+        self.conversation.add_assistant(response["text"])
 
         return response["text"]

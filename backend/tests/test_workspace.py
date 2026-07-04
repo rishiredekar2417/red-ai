@@ -2,7 +2,6 @@ from pathlib import Path
 
 from app.workspace.scanner import WorkspaceScanner
 
-
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 

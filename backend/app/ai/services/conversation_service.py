@@ -8,21 +8,11 @@ class ConversationService:
 
     def add_user(self, text: str):
 
-        self.messages.append(
-            {
-                "role": "user",
-                "content": text
-            }
-        )
+        self.messages.append({"role": "user", "content": text})
 
     def add_assistant(self, text: str):
 
-        self.messages.append(
-            {
-                "role": "assistant",
-                "content": text
-            }
-        )
+        self.messages.append({"role": "assistant", "content": text})
 
     def history(self):
 

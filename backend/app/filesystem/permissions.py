@@ -11,8 +11,6 @@ class PermissionManager:
         target = Path(path).resolve()
 
         if not str(target).startswith(str(self.root)):
-            raise PermissionError(
-                "Access outside project folder is not allowed."
-            )
+            raise PermissionError("Access outside project folder is not allowed.")
 
         return target

@@ -5,11 +5,11 @@ from app.core.settings import settings
 from app.core.logging import app_logger
 from app.api.chat import router as chat_router
 
+from app.core.lifecycle import lifespan
 
 app = FastAPI(
-    title=settings.APP_NAME,
-    version=settings.APP_VERSION,
-    description="RED AI Backend API"
+    title="RED AI",
+    lifespan=lifespan,
 )
 
 
