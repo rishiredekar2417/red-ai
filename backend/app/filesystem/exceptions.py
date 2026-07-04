@@ -1,0 +1,2 @@
+class FileAccessError(Exception):
+    pass

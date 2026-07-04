@@ -1,6 +1,7 @@
 from app.core.config import PROVIDER
 
-from app.ai.providers.openai_provider import OpenAIProvider
+# from app.ai.providers.openai_provider import OpenAIProvider
+from .ollama_provider import OllamaProvider
 
 
 class ProviderFactory:
@@ -9,7 +10,8 @@ class ProviderFactory:
     def create():
 
         if PROVIDER == "openai":
-            return OpenAIProvider()
+            return OllamaProvider()
+            # return OpenAIProvider()
 
         raise ValueError(
             f"Unknown provider: {PROVIDER}"

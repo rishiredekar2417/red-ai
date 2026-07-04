@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from app.api.routes import router
 from app.core.settings import settings
 from app.core.logging import app_logger
+from app.api.chat import router as chat_router
 
 
 app = FastAPI(
@@ -23,3 +24,4 @@ async def shutdown_event():
 
 
 app.include_router(router)
+app.include_router(chat_router)
