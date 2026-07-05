@@ -26,35 +26,36 @@ class ProjectScanner:
 
     def search(self, query: str):
 
-        query = query.lower()
+        words = {
+            word.lower()
+            for word in query.split()
+            if len(word) > 2
+        }
 
         matches = []
 
         for file in self.scan():
 
-            # Match language
-            if query in file.language.lower():
-                matches.append(file)
-                continue
+            score = 0
 
-            # Match file path
-            if query in file.path.lower():
-                matches.append(file)
-                continue
+            searchable = " ".join([
+                file.path,
+                file.language,
+                " ".join(file.classes),
+                " ".join(file.functions),
+                " ".join(file.imports),
+            ]).lower()
 
-            # Match function names
-            if any(query in func.lower() for func in file.functions):
-                matches.append(file)
-                continue
+            for word in words:
+                if word in searchable:
+                    score += 1
 
-            # Match class names
-            if any(query in cls.lower() for cls in file.classes):
-                matches.append(file)
-                continue
+            if score:
+                matches.append((score, file))
 
-            # Match imported modules
-            if any(query in imp.lower() for imp in file.imports):
-                matches.append(file)
-                continue
+        matches.sort(
+            key=lambda x: x[0],
+            reverse=True,
+        )
 
-        return matches
+        return [file for _, file in matches]

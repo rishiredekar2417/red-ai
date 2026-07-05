@@ -37,4 +37,4 @@ def test_search_function():
 
     search = ProjectSearch(files)
 
-    assert isinstance(search.by_function("scan"), list)
+    assert isinstance(search.by_function("scan"), list) 

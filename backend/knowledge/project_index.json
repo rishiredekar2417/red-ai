@@ -1,0 +1,1618 @@
+[
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\.env",
+        "language": "Unknown",
+        "size": 411,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\.env.example",
+        "language": "Unknown",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\pyproject.toml",
+        "language": "Unknown",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\pytest.ini",
+        "language": "Unknown",
+        "size": 43,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\requirements.txt",
+        "language": "Unknown",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\.ruff_cache\\.gitignore",
+        "language": "Unknown",
+        "size": 35,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\.ruff_cache\\CACHEDIR.TAG",
+        "language": "Unknown",
+        "size": 43,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\main.py",
+        "language": "Python",
+        "size": 607,
+        "lines": 27,
+        "functions": [],
+        "classes": [],
+        "imports": [
+            "fastapi",
+            "app.api.routes",
+            "app.core.settings",
+            "app.core.logging",
+            "app.api.chat",
+            "app.core.lifecycle"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\__init__.py",
+        "language": "Python",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\knowledge\\project_index.json",
+        "language": "JSON",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\scripts\\build_index.py",
+        "language": "Python",
+        "size": 460,
+        "lines": 24,
+        "functions": [
+            "main"
+        ],
+        "classes": [],
+        "imports": [
+            "pathlib",
+            "app.knowledge.index_builder"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\scripts\\test_ollama.py",
+        "language": "Python",
+        "size": 952,
+        "lines": 45,
+        "functions": [
+            "main"
+        ],
+        "classes": [],
+        "imports": [
+            "pathlib",
+            "app.llm.service"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\scripts\\__init__.py",
+        "language": "Python",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\tests\\test_agent.py",
+        "language": "Python",
+        "size": 448,
+        "lines": 23,
+        "functions": [
+            "test_list_tool",
+            "test_unknown_tool"
+        ],
+        "classes": [],
+        "imports": [
+            "pathlib",
+            "app.agent.orchestrator"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\tests\\test_context.py",
+        "language": "Python",
+        "size": 641,
+        "lines": 32,
+        "functions": [
+            "test_context_builder",
+            "test_context_contains_files",
+            "test_context_contains_content"
+        ],
+        "classes": [],
+        "imports": [
+            "pathlib",
+            "app.context.builder"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\tests\\test_conversation.py",
+        "language": "Python",
+        "size": 622,
+        "lines": 33,
+        "functions": [
+            "test_add_message",
+            "test_clear_history",
+            "test_message_order"
+        ],
+        "classes": [],
+        "imports": [
+            "app.conversation.history"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\tests\\test_conversation_service.py",
+        "language": "Python",
+        "size": 596,
+        "lines": 30,
+        "functions": [
+            "test_history_adds_user_message",
+            "test_history_role",
+            "test_history_content"
+        ],
+        "classes": [],
+        "imports": [
+            "pathlib",
+            "app.llm.service"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\tests\\test_core.py",
+        "language": "Python",
+        "size": 207,
+        "lines": 10,
+        "functions": [
+            "test_settings",
+            "test_constants"
+        ],
+        "classes": [],
+        "imports": [
+            "app.core.settings",
+            "app.core.constants"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\tests\\test_filesystem.py",
+        "language": "Python",
+        "size": 449,
+        "lines": 21,
+        "functions": [
+            "test_read_current_file",
+            "test_file_exists"
+        ],
+        "classes": [],
+        "imports": [
+            "pathlib",
+            "app.filesystem.file_manager"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\tests\\test_indexer.py",
+        "language": "Python",
+        "size": 283,
+        "lines": 16,
+        "functions": [
+            "test_python_index"
+        ],
+        "classes": [],
+        "imports": [
+            "pathlib",
+            "app.indexer.indexer"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\tests\\test_knowledge.py",
+        "language": "Python",
+        "size": 747,
+        "lines": 40,
+        "functions": [
+            "test_scan",
+            "test_search_python",
+            "test_search_function"
+        ],
+        "classes": [],
+        "imports": [
+            "pathlib",
+            "app.knowledge.scanner",
+            "app.knowledge.search"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\tests\\test_llm_models.py",
+        "language": "Python",
+        "size": 349,
+        "lines": 21,
+        "functions": [
+            "test_chat_message",
+            "test_chat_response"
+        ],
+        "classes": [],
+        "imports": [
+            "app.llm.models"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\tests\\test_llm_service.py",
+        "language": "Python",
+        "size": 539,
+        "lines": 25,
+        "functions": [
+            "test_service",
+            "test_service_message"
+        ],
+        "classes": [],
+        "imports": [
+            "pathlib",
+            "app.core.settings",
+            "app.llm.service"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\tests\\test_memory.py",
+        "language": "Python",
+        "size": 380,
+        "lines": 23,
+        "functions": [
+            "test_memory",
+            "test_clear"
+        ],
+        "classes": [],
+        "imports": [
+            "app.memory.memory"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\tests\\test_ollama.py",
+        "language": "Python",
+        "size": 319,
+        "lines": 17,
+        "functions": [],
+        "classes": [],
+        "imports": [
+            "pathlib",
+            "app.llm.service"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\tests\\test_prompt_builder.py",
+        "language": "Python",
+        "size": 492,
+        "lines": 24,
+        "functions": [
+            "test_prompt_contains_question",
+            "test_prompt_contains_context"
+        ],
+        "classes": [],
+        "imports": [
+            "pathlib",
+            "app.llm.prompt_builder"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\tests\\test_registry.py",
+        "language": "Python",
+        "size": 241,
+        "lines": 13,
+        "functions": [
+            "test_registry",
+            "test_registry_count"
+        ],
+        "classes": [],
+        "imports": [
+            "app.tools.registry"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\tests\\test_tools.py",
+        "language": "Python",
+        "size": 465,
+        "lines": 24,
+        "functions": [
+            "test_list_files",
+            "test_read_file"
+        ],
+        "classes": [],
+        "imports": [
+            "pathlib",
+            "app.tools.manager"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\tests\\test_tool_manager.py",
+        "language": "Python",
+        "size": 228,
+        "lines": 12,
+        "functions": [
+            "test_manager"
+        ],
+        "classes": [],
+        "imports": [
+            "pathlib",
+            "app.tools.manager"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\tests\\test_workspace.py",
+        "language": "Python",
+        "size": 447,
+        "lines": 21,
+        "functions": [
+            "test_workspace_scan",
+            "test_python_files_exist"
+        ],
+        "classes": [],
+        "imports": [
+            "pathlib",
+            "app.workspace.scanner"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\agent\\executor.py",
+        "language": "Python",
+        "size": 368,
+        "lines": 18,
+        "functions": [
+            "__init__",
+            "execute"
+        ],
+        "classes": [
+            "Executor"
+        ],
+        "imports": [
+            "pathlib",
+            "app.agent.models",
+            "app.tools.manager"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\agent\\models.py",
+        "language": "Python",
+        "size": 178,
+        "lines": 11,
+        "functions": [],
+        "classes": [
+            "AgentAction",
+            "AgentResponse"
+        ],
+        "imports": [
+            "pydantic"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\agent\\orchestrator.py",
+        "language": "Python",
+        "size": 606,
+        "lines": 25,
+        "functions": [
+            "__init__",
+            "run"
+        ],
+        "classes": [
+            "AgentOrchestrator"
+        ],
+        "imports": [
+            "pathlib",
+            "app.agent.executor",
+            "app.agent.models",
+            "app.agent.planner"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\agent\\planner.py",
+        "language": "Python",
+        "size": 371,
+        "lines": 18,
+        "functions": [
+            "plan"
+        ],
+        "classes": [
+            "Planner"
+        ],
+        "imports": [
+            "app.agent.models"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\agent\\__init__.py",
+        "language": "Python",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\ai\\prompt_manager.py",
+        "language": "Python",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\ai\\provider.py",
+        "language": "Python",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\ai\\__init__.py",
+        "language": "Python",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\api\\chat.py",
+        "language": "Python",
+        "size": 404,
+        "lines": 20,
+        "functions": [],
+        "classes": [
+            "ChatRequest"
+        ],
+        "imports": [
+            "pydantic",
+            "fastapi",
+            "app.ai.services.chat_service"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\api\\routes.py",
+        "language": "Python",
+        "size": 250,
+        "lines": 13,
+        "functions": [],
+        "classes": [],
+        "imports": [
+            "fastapi"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\api\\__init__.py",
+        "language": "Python",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\context\\builder.py",
+        "language": "Python",
+        "size": 853,
+        "lines": 40,
+        "functions": [
+            "__init__",
+            "build"
+        ],
+        "classes": [
+            "ContextBuilder"
+        ],
+        "imports": [
+            "pathlib",
+            "models",
+            "retriever",
+            "summarizer"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\context\\models.py",
+        "language": "Python",
+        "size": 118,
+        "lines": 7,
+        "functions": [],
+        "classes": [
+            "Context"
+        ],
+        "imports": [
+            "pydantic"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\context\\retriever.py",
+        "language": "Python",
+        "size": 1044,
+        "lines": 44,
+        "functions": [
+            "__init__",
+            "retrieve"
+        ],
+        "classes": [
+            "ContextRetriever"
+        ],
+        "imports": [
+            "pathlib",
+            "app.filesystem.file_manager",
+            "app.knowledge.scanner"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\context\\selector.py",
+        "language": "Python",
+        "size": 536,
+        "lines": 24,
+        "functions": [
+            "__init__",
+            "select"
+        ],
+        "classes": [
+            "ContextSelector"
+        ],
+        "imports": [
+            "app.knowledge.scanner"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\context\\summarizer.py",
+        "language": "Python",
+        "size": 549,
+        "lines": 30,
+        "functions": [
+            "summarize"
+        ],
+        "classes": [
+            "ContextSummarizer"
+        ],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\context\\__init__.py",
+        "language": "Python",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\conversation\\history.py",
+        "language": "Python",
+        "size": 346,
+        "lines": 18,
+        "functions": [
+            "__init__",
+            "add",
+            "clear",
+            "all"
+        ],
+        "classes": [
+            "ConversationHistory"
+        ],
+        "imports": [
+            "models"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\conversation\\models.py",
+        "language": "Python",
+        "size": 164,
+        "lines": 12,
+        "functions": [],
+        "classes": [
+            "Message",
+            "Conversation"
+        ],
+        "imports": [
+            "dataclasses"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\conversation\\__init__.py",
+        "language": "Python",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\core\\config.py",
+        "language": "Python",
+        "size": 91,
+        "lines": 6,
+        "functions": [],
+        "classes": [],
+        "imports": [
+            "settings",
+            "constants"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\core\\constants.py",
+        "language": "Python",
+        "size": 602,
+        "lines": 31,
+        "functions": [],
+        "classes": [],
+        "imports": [
+            "pathlib"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\core\\dependencies.py",
+        "language": "Python",
+        "size": 123,
+        "lines": 5,
+        "functions": [
+            "get_provider"
+        ],
+        "classes": [],
+        "imports": [
+            "app.ai.providers.provider_factory"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\core\\exceptions.py",
+        "language": "Python",
+        "size": 198,
+        "lines": 14,
+        "functions": [],
+        "classes": [
+            "RedAIException",
+            "ToolNotFound",
+            "ProviderError",
+            "WorkspaceError"
+        ],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\core\\lifecycle.py",
+        "language": "Python",
+        "size": 274,
+        "lines": 15,
+        "functions": [],
+        "classes": [],
+        "imports": [
+            "contextlib",
+            "fastapi",
+            "app.core.logging"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\core\\logging.py",
+        "language": "Python",
+        "size": 163,
+        "lines": 8,
+        "functions": [],
+        "classes": [],
+        "imports": [
+            "logging"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\core\\settings.py",
+        "language": "Python",
+        "size": 643,
+        "lines": 30,
+        "functions": [],
+        "classes": [
+            "Settings"
+        ],
+        "imports": [
+            "pydantic_settings"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\core\\__init__.py",
+        "language": "Python",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\filesystem\\exceptions.py",
+        "language": "Python",
+        "size": 45,
+        "lines": 2,
+        "functions": [],
+        "classes": [
+            "FileAccessError"
+        ],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\filesystem\\file_manager.py",
+        "language": "Python",
+        "size": 907,
+        "lines": 33,
+        "functions": [
+            "__init__",
+            "read",
+            "exists",
+            "list_directory"
+        ],
+        "classes": [
+            "FileManager"
+        ],
+        "imports": [
+            "pathlib",
+            "permissions"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\filesystem\\models.py",
+        "language": "Python",
+        "size": 133,
+        "lines": 8,
+        "functions": [],
+        "classes": [
+            "FileInfo"
+        ],
+        "imports": [
+            "pydantic"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\filesystem\\permissions.py",
+        "language": "Python",
+        "size": 382,
+        "lines": 16,
+        "functions": [
+            "__init__",
+            "validate"
+        ],
+        "classes": [
+            "PermissionManager"
+        ],
+        "imports": [
+            "pathlib"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\filesystem\\__init__.py",
+        "language": "Python",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\indexer\\filters.py",
+        "language": "Python",
+        "size": 234,
+        "lines": 11,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\indexer\\indexer.py",
+        "language": "Python",
+        "size": 943,
+        "lines": 40,
+        "functions": [
+            "__init__",
+            "index_file"
+        ],
+        "classes": [
+            "ProjectIndexer"
+        ],
+        "imports": [
+            "pathlib",
+            "filters",
+            "models",
+            "parser"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\indexer\\models.py",
+        "language": "Python",
+        "size": 206,
+        "lines": 11,
+        "functions": [],
+        "classes": [
+            "IndexedFile"
+        ],
+        "imports": [
+            "pydantic"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\indexer\\parser.py",
+        "language": "Python",
+        "size": 934,
+        "lines": 37,
+        "functions": [
+            "parse"
+        ],
+        "classes": [
+            "PythonParser"
+        ],
+        "imports": [
+            "ast",
+            "pathlib"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\indexer\\__init__.py",
+        "language": "Python",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\knowledge\\cache.py",
+        "language": "Python",
+        "size": 400,
+        "lines": 23,
+        "functions": [
+            "__init__",
+            "save",
+            "load"
+        ],
+        "classes": [
+            "ProjectCache"
+        ],
+        "imports": [
+            "json",
+            "pathlib"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\knowledge\\index_builder.py",
+        "language": "Python",
+        "size": 1114,
+        "lines": 44,
+        "functions": [
+            "__init__",
+            "build"
+        ],
+        "classes": [
+            "IndexBuilder"
+        ],
+        "imports": [
+            "pathlib",
+            "app.indexer.indexer",
+            "app.knowledge.store",
+            "app.workspace.scanner"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\knowledge\\project_graph.py",
+        "language": "Python",
+        "size": 295,
+        "lines": 17,
+        "functions": [
+            "__init__",
+            "add",
+            "all_files",
+            "count"
+        ],
+        "classes": [
+            "ProjectGraph"
+        ],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\knowledge\\scanner.py",
+        "language": "Python",
+        "size": 1389,
+        "lines": 61,
+        "functions": [
+            "__init__",
+            "scan",
+            "search"
+        ],
+        "classes": [
+            "ProjectScanner"
+        ],
+        "imports": [
+            "pathlib",
+            "app.workspace.scanner",
+            "app.indexer.indexer"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\knowledge\\search.py",
+        "language": "Python",
+        "size": 760,
+        "lines": 39,
+        "functions": [
+            "__init__",
+            "by_language",
+            "by_function",
+            "by_class",
+            "by_filename"
+        ],
+        "classes": [
+            "ProjectSearch"
+        ],
+        "imports": [
+            "pathlib"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\knowledge\\store.py",
+        "language": "Python",
+        "size": 850,
+        "lines": 45,
+        "functions": [
+            "__init__",
+            "exists",
+            "load",
+            "save"
+        ],
+        "classes": [
+            "KnowledgeStore"
+        ],
+        "imports": [
+            "json",
+            "pathlib"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\knowledge\\__init__.py",
+        "language": "Python",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\llm\\base.py",
+        "language": "Python",
+        "size": 182,
+        "lines": 10,
+        "functions": [
+            "chat"
+        ],
+        "classes": [
+            "BaseLLM"
+        ],
+        "imports": [
+            "abc",
+            "models"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\llm\\chat.py",
+        "language": "Python",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\llm\\exceptions.py",
+        "language": "Python",
+        "size": 233,
+        "lines": 10,
+        "functions": [],
+        "classes": [
+            "LLMError",
+            "ProviderError",
+            "ConfigurationError"
+        ],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\llm\\factory.py",
+        "language": "Python",
+        "size": 464,
+        "lines": 22,
+        "functions": [
+            "create"
+        ],
+        "classes": [
+            "LLMFactory"
+        ],
+        "imports": [
+            "app.core.settings",
+            "ollama_client",
+            "openai_client"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\llm\\models.py",
+        "language": "Python",
+        "size": 168,
+        "lines": 11,
+        "functions": [],
+        "classes": [
+            "ChatMessage",
+            "ChatResponse"
+        ],
+        "imports": [
+            "pydantic"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\llm\\ollama_client.py",
+        "language": "Python",
+        "size": 1006,
+        "lines": 44,
+        "functions": [
+            "__init__",
+            "chat"
+        ],
+        "classes": [
+            "OllamaClient"
+        ],
+        "imports": [
+            "requests",
+            "app.core.settings",
+            "base",
+            "models"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\llm\\openai_client.py",
+        "language": "Python",
+        "size": 1131,
+        "lines": 46,
+        "functions": [
+            "__init__",
+            "chat"
+        ],
+        "classes": [
+            "OpenAIClient"
+        ],
+        "imports": [
+            "openai",
+            "app.core.settings",
+            "base",
+            "models"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\llm\\prompt_builder.py",
+        "language": "Python",
+        "size": 1361,
+        "lines": 77,
+        "functions": [
+            "__init__",
+            "build"
+        ],
+        "classes": [
+            "PromptBuilder"
+        ],
+        "imports": [
+            "pathlib",
+            "app.context.builder"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\llm\\service.py",
+        "language": "Python",
+        "size": 642,
+        "lines": 31,
+        "functions": [
+            "__init__",
+            "chat"
+        ],
+        "classes": [
+            "LLMService"
+        ],
+        "imports": [
+            "pathlib",
+            "app.conversation.history",
+            "factory",
+            "prompt_builder"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\llm\\__init__.py",
+        "language": "Python",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\memory\\memory.py",
+        "language": "Python",
+        "size": 450,
+        "lines": 21,
+        "functions": [
+            "__init__",
+            "add",
+            "history",
+            "clear"
+        ],
+        "classes": [
+            "ConversationMemory"
+        ],
+        "imports": [
+            "collections"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\memory\\store.py",
+        "language": "Python",
+        "size": 407,
+        "lines": 23,
+        "functions": [
+            "__init__",
+            "save",
+            "load"
+        ],
+        "classes": [
+            "MemoryStore"
+        ],
+        "imports": [
+            "json",
+            "pathlib"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\memory\\summarizer.py",
+        "language": "Python",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\memory\\__init__.py",
+        "language": "Python",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\tools\\base.py",
+        "language": "Python",
+        "size": 346,
+        "lines": 18,
+        "functions": [
+            "execute",
+            "schema"
+        ],
+        "classes": [
+            "BaseTool"
+        ],
+        "imports": [
+            "abc"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\tools\\decorators.py",
+        "language": "Python",
+        "size": 127,
+        "lines": 10,
+        "functions": [
+            "tool"
+        ],
+        "classes": [],
+        "imports": [
+            "registry"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\tools\\edit.py",
+        "language": "Python",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\tools\\filesystem.py",
+        "language": "Python",
+        "size": 400,
+        "lines": 17,
+        "functions": [
+            "__init__",
+            "execute"
+        ],
+        "classes": [
+            "FilesystemTool"
+        ],
+        "imports": [
+            "pathlib",
+            "app.filesystem.file_manager",
+            "base"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\tools\\git.py",
+        "language": "Python",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\tools\\list_files.py",
+        "language": "Python",
+        "size": 433,
+        "lines": 19,
+        "functions": [
+            "__init__",
+            "execute"
+        ],
+        "classes": [
+            "ListFilesTool"
+        ],
+        "imports": [
+            "pathlib",
+            "app.workspace.scanner",
+            "base"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\tools\\manager.py",
+        "language": "Python",
+        "size": 810,
+        "lines": 37,
+        "functions": [
+            "__init__",
+            "execute",
+            "available"
+        ],
+        "classes": [
+            "ToolManager"
+        ],
+        "imports": [
+            "pathlib",
+            "registry",
+            "list_files",
+            "read_file"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\tools\\read_file.py",
+        "language": "Python",
+        "size": 394,
+        "lines": 17,
+        "functions": [
+            "__init__",
+            "execute"
+        ],
+        "classes": [
+            "ReadFileTool"
+        ],
+        "imports": [
+            "pathlib",
+            "app.filesystem.file_manager",
+            "base"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\tools\\registry.py",
+        "language": "Python",
+        "size": 397,
+        "lines": 21,
+        "functions": [
+            "__init__",
+            "register",
+            "get",
+            "all"
+        ],
+        "classes": [
+            "ToolRegistry"
+        ],
+        "imports": [
+            "typing",
+            "base"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\tools\\search.py",
+        "language": "Python",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\tools\\search_code.py",
+        "language": "Python",
+        "size": 717,
+        "lines": 29,
+        "functions": [
+            "__init__",
+            "execute"
+        ],
+        "classes": [
+            "SearchCodeTool"
+        ],
+        "imports": [
+            "pathlib",
+            "app.knowledge.scanner",
+            "base"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\tools\\terminal.py",
+        "language": "Python",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\tools\\workspace.py",
+        "language": "Python",
+        "size": 637,
+        "lines": 27,
+        "functions": [
+            "__init__",
+            "execute"
+        ],
+        "classes": [
+            "WorkspaceTool"
+        ],
+        "imports": [
+            "pathlib",
+            "app.workspace.scanner",
+            "base"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\tools\\__init__.py",
+        "language": "Python",
+        "size": 51,
+        "lines": 2,
+        "functions": [],
+        "classes": [],
+        "imports": [
+            "filesystem",
+            "workspace"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\workspace\\ignore.py",
+        "language": "Python",
+        "size": 224,
+        "lines": 16,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\workspace\\models.py",
+        "language": "Python",
+        "size": 265,
+        "lines": 15,
+        "functions": [],
+        "classes": [
+            "WorkspaceFile",
+            "WorkspaceSummary"
+        ],
+        "imports": [
+            "pathlib",
+            "pydantic"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\workspace\\scanner.py",
+        "language": "Python",
+        "size": 837,
+        "lines": 35,
+        "functions": [
+            "__init__",
+            "scan"
+        ],
+        "classes": [
+            "WorkspaceScanner"
+        ],
+        "imports": [
+            "pathlib",
+            "ignore",
+            "models"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\workspace\\__init__.py",
+        "language": "Python",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\ai\\models\\__init__.py",
+        "language": "Python",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\ai\\prompts\\__init__.py",
+        "language": "Python",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\ai\\providers\\base_provider.py",
+        "language": "Python",
+        "size": 478,
+        "lines": 20,
+        "functions": [],
+        "classes": [
+            "BaseProvider"
+        ],
+        "imports": [
+            "abc",
+            "typing"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\ai\\providers\\ollama_provider.py",
+        "language": "Python",
+        "size": 456,
+        "lines": 18,
+        "functions": [
+            "__init__"
+        ],
+        "classes": [
+            "OllamaProvider"
+        ],
+        "imports": [
+            "ollama",
+            "app.core.settings"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\ai\\providers\\openai_provider.py",
+        "language": "Python",
+        "size": 556,
+        "lines": 22,
+        "functions": [
+            "__init__"
+        ],
+        "classes": [
+            "OpenAIProvider"
+        ],
+        "imports": [
+            "openai",
+            "app.ai.providers.base_provider",
+            "app.core.config"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\ai\\providers\\provider_factory.py",
+        "language": "Python",
+        "size": 655,
+        "lines": 23,
+        "functions": [
+            "create"
+        ],
+        "classes": [
+            "ProviderFactory"
+        ],
+        "imports": [
+            "app.core.config",
+            "ollama_provider",
+            "app.core.settings"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\ai\\providers\\__init__.py",
+        "language": "Python",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\ai\\services\\chat_service.py",
+        "language": "Python",
+        "size": 549,
+        "lines": 21,
+        "functions": [
+            "__init__"
+        ],
+        "classes": [
+            "ChatService"
+        ],
+        "imports": [
+            "app.ai.providers.provider_factory",
+            "app.ai.services.conversation_service"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\ai\\services\\conversation_service.py",
+        "language": "Python",
+        "size": 418,
+        "lines": 19,
+        "functions": [
+            "__init__",
+            "add_user",
+            "add_assistant",
+            "history"
+        ],
+        "classes": [
+            "ConversationService"
+        ],
+        "imports": [
+            "typing"
+        ]
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\ai\\services\\__init__.py",
+        "language": "Python",
+        "size": 0,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\.ruff_cache\\0.15.20\\12974949712578731736",
+        "language": "Unknown",
+        "size": 275,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    },
+    {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\.ruff_cache\\0.15.20\\16947619337932639915",
+        "language": "Unknown",
+        "size": 1996,
+        "lines": 0,
+        "functions": [],
+        "classes": [],
+        "imports": []
+    }
+]

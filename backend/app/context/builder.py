@@ -1,10 +1,7 @@
 from pathlib import Path
 
-from app.filesystem.file_manager import FileManager
-from app.knowledge.scanner import ProjectScanner
-
 from .models import Context
-from .selector import ContextSelector
+from .retriever import ContextRetriever
 from .summarizer import ContextSummarizer
 
 
@@ -12,42 +9,32 @@ class ContextBuilder:
 
     def __init__(self, root: Path):
 
-        self.files = FileManager(root)
-
-        self.scanner = ProjectScanner(root)
-
-        self.selector = ContextSelector(
-            self.scanner
-        )
+        self.retriever = ContextRetriever(root)
 
         self.summarizer = ContextSummarizer()
 
-    def build(self, prompt: str):
+    def build(
+        self,
+        user_prompt: str,
+        history=None,
+    ):
 
-        matches = self.selector.select(prompt)
+        documents = self.retriever.retrieve(user_prompt)
 
-        paths = []
-
-        docs = []
-
-        for item in matches:
-
-            paths.append(item.path)
-
-            try:
-                docs.append(
-                    self.files.read(item.path)
-                )
-
-            except Exception:
-                continue
+        files = [
+            document["path"]
+            for document in documents
+        ]
 
         summary = self.summarizer.summarize(
-            docs
+            [
+                document["content"]
+                for document in documents
+            ]
         )
 
         return Context(
-            prompt=prompt,
-            files=paths,
+            prompt=user_prompt,
+            files=files,
             content=summary,
         )

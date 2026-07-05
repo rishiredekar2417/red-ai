@@ -8,8 +8,17 @@ class ContextSelector:
 
     def select(self, prompt: str):
 
-        prompt = prompt.lower()
-
         matches = self.scanner.search(prompt)
 
-        return matches[:5]
+        python_files = []
+
+        other_files = []
+
+        for file in matches:
+
+            if file.language == "Python":
+                python_files.append(file)
+            else:
+                other_files.append(file)
+
+        return (python_files + other_files)[:8]

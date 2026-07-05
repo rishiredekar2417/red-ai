@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     ENVIRONMENT: str = "development"
     LOG_LEVEL: str = "INFO"
 
-    PROVIDER: str = "ollama"
+    PROVIDER: str = "openai"
 
     AI_PROVIDER: str = "ollama"
 
