@@ -90,7 +90,7 @@
     {
         "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\knowledge\\project_index.json",
         "language": "JSON",
-        "size": 0,
+        "size": 44742,
         "lines": 0,
         "functions": [],
         "classes": [],
@@ -542,6 +542,19 @@
         ]
     },
     {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\context\\chunk.py",
+        "language": "Python",
+        "size": 186,
+        "lines": 11,
+        "functions": [],
+        "classes": [
+            "CodeChunk"
+        ],
+        "imports": [
+            "pydantic"
+        ]
+    },
+    {
         "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\context\\models.py",
         "language": "Python",
         "size": 118,
@@ -557,8 +570,8 @@
     {
         "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\context\\retriever.py",
         "language": "Python",
-        "size": 1044,
-        "lines": 44,
+        "size": 1555,
+        "lines": 63,
         "functions": [
             "__init__",
             "retrieve"
@@ -816,6 +829,19 @@
         "imports": []
     },
     {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\indexer\\chunk.py",
+        "language": "Python",
+        "size": 295,
+        "lines": 19,
+        "functions": [],
+        "classes": [
+            "CodeChunk"
+        ],
+        "imports": [
+            "pydantic"
+        ]
+    },
+    {
         "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\indexer\\filters.py",
         "language": "Python",
         "size": 234,
@@ -827,8 +853,8 @@
     {
         "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\indexer\\indexer.py",
         "language": "Python",
-        "size": 943,
-        "lines": 40,
+        "size": 1393,
+        "lines": 56,
         "functions": [
             "__init__",
             "index_file"
@@ -846,21 +872,22 @@
     {
         "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\indexer\\models.py",
         "language": "Python",
-        "size": 206,
-        "lines": 11,
+        "size": 286,
+        "lines": 22,
         "functions": [],
         "classes": [
             "IndexedFile"
         ],
         "imports": [
-            "pydantic"
+            "pydantic",
+            "chunk"
         ]
     },
     {
         "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\indexer\\parser.py",
         "language": "Python",
-        "size": 934,
-        "lines": 37,
+        "size": 3271,
+        "lines": 111,
         "functions": [
             "parse"
         ],
@@ -937,8 +964,8 @@
     {
         "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\knowledge\\scanner.py",
         "language": "Python",
-        "size": 1389,
-        "lines": 61,
+        "size": 1435,
+        "lines": 67,
         "functions": [
             "__init__",
             "scan",
@@ -949,8 +976,11 @@
         ],
         "imports": [
             "pathlib",
-            "app.workspace.scanner",
-            "app.indexer.indexer"
+            "app.indexer.indexer",
+            "app.indexer.models",
+            "app.knowledge.search_engine",
+            "app.knowledge.store",
+            "app.workspace.scanner"
         ]
     },
     {
@@ -973,10 +1003,26 @@
         ]
     },
     {
+        "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\knowledge\\search_engine.py",
+        "language": "Python",
+        "size": 1739,
+        "lines": 75,
+        "functions": [
+            "search"
+        ],
+        "classes": [
+            "ProjectSearch"
+        ],
+        "imports": [
+            "pathlib",
+            "app.indexer.models"
+        ]
+    },
+    {
         "path": "C:\\Users\\Rishi\\OneDrive\\Desktop\\Red-AI\\red-ai\\backend\\app\\knowledge\\store.py",
         "language": "Python",
-        "size": 850,
-        "lines": 45,
+        "size": 910,
+        "lines": 51,
         "functions": [
             "__init__",
             "exists",

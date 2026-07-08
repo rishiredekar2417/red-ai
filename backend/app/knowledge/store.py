@@ -8,9 +8,13 @@ class KnowledgeStore:
 
         self.root = Path(root).resolve()
 
-        self.path = self.root / "knowledge" / "project_index.json"
+        self.path = (
+            self.root
+            / "knowledge"
+            / "project_index.json"
+        )
 
-    def exists(self) -> bool:
+    def exists(self):
 
         return self.path.exists()
 
@@ -19,12 +23,13 @@ class KnowledgeStore:
         if not self.exists():
             return []
 
-        with self.path.open(
+        with open(
+            self.path,
             "r",
             encoding="utf-8",
-        ) as file:
+        ) as f:
 
-            return json.load(file)
+            return json.load(f)
 
     def save(self, data):
 
@@ -33,13 +38,14 @@ class KnowledgeStore:
             exist_ok=True,
         )
 
-        with self.path.open(
+        with open(
+            self.path,
             "w",
             encoding="utf-8",
-        ) as file:
+        ) as f:
 
             json.dump(
                 data,
-                file,
+                f,
                 indent=4,
             )

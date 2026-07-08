@@ -1,39 +1,104 @@
-from pathlib import Path
+from app.indexer.models import IndexedFile
 
 
 class ProjectSearch:
+    """
+    Responsible only for searching and ranking indexed files.
 
-    def __init__(self, files):
-        self.files = files
+    ProjectScanner builds the index.
+    ProjectSearch searches the index.
+    """
 
-    def by_language(self, language):
+    def search(
+        self,
+        files: list[IndexedFile],
+        query: str,
+    ) -> list[IndexedFile]:
+
+        words = {
+            word.lower()
+            for word in query.split()
+            if len(word) > 2
+        }
+
+        scored: list[tuple[int, IndexedFile]] = []
+
+        for file in files:
+
+            score = self.score_file(
+                file,
+                words,
+            )
+
+            if score > 0:
+                scored.append((score, file))
+
+        scored.sort(
+            key=lambda item: item[0],
+            reverse=True,
+        )
 
         return [
             file
-            for file in self.files
-            if file.language == language
+            for _, file in scored
         ]
 
-    def by_function(self, name):
+    def score_file(
+        self,
+        file: IndexedFile,
+        words: set[str],
+    ) -> int:
 
-        return [
-            file
-            for file in self.files
-            if name in file.functions
-        ]
+        score = 0
 
-    def by_class(self, name):
+        path = file.path.lower()
+        language = file.language.lower()
 
-        return [
-            file
-            for file in self.files
-            if name in file.classes
-        ]
+        # ---------- filename ----------
 
-    def by_filename(self, name):
+        for word in words:
 
-        return [
-            file
-            for file in self.files
-            if Path(file.path).name == name
-        ]
+            if word in path:
+                score += 30
+
+        # ---------- language ----------
+
+        for word in words:
+
+            if word in language:
+                score += 3
+
+        # ---------- classes ----------
+
+        for cls in file.classes:
+
+            text = cls.lower()
+
+            for word in words:
+
+                if word in text:
+                    score += 25
+
+        # ---------- functions ----------
+
+        for func in file.functions:
+
+            text = func.lower()
+
+            for word in words:
+
+                if word in text:
+                    score += 20
+
+        # ---------- imports ----------
+
+        for imp in file.imports:
+
+            text = imp.lower()
+
+            for word in words:
+
+                if word in text:
+                    score += 10
+
+        return score

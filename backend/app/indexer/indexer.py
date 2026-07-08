@@ -1,7 +1,7 @@
 from pathlib import Path
 
 from .filters import SUPPORTED_LANGUAGES
-from .models import IndexedFile
+from .models import IndexedFile, CodeChunk
 from .parser import PythonParser
 
 
@@ -18,6 +18,10 @@ class ProjectIndexer:
         functions = []
         classes = []
         imports = []
+
+        function_chunks = []
+        class_chunks = []
+
         lines = 0
 
         if language == "Python":
@@ -29,6 +33,16 @@ class ProjectIndexer:
             imports = result["imports"]
             lines = result["lines"]
 
+            function_chunks = [
+                CodeChunk(**chunk)
+                for chunk in result.get("function_chunks", [])
+            ]
+
+            class_chunks = [
+                CodeChunk(**chunk)
+                for chunk in result.get("class_chunks", [])
+            ]
+
         return IndexedFile(
             path=str(file),
             language=language,
@@ -37,4 +51,6 @@ class ProjectIndexer:
             functions=functions,
             classes=classes,
             imports=imports,
+            function_chunks=function_chunks,
+            class_chunks=class_chunks,
         )
