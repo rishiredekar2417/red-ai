@@ -1,18 +1,18 @@
 from ollama import AsyncClient
 from app.core.settings import settings
+from app.ai.providers.base_provider import BaseProvider
 
 
-class OllamaProvider:
+class OllamaProvider(BaseProvider):
 
     def __init__(self):
-        self.client = AsyncClient(host=settings.OLLAMA_HOST)
+        self.client = AsyncClient(host=settings.OLLAMA_URL)
 
     async def chat(self, messages):
-
         response = await self.client.chat(
             model=settings.OLLAMA_MODEL,
-            host=settings.OLLAMA_URL,
             messages=messages,
         )
 
         return {"text": response["message"]["content"]}
+

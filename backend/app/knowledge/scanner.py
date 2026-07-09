@@ -70,3 +70,4 @@ class ProjectScanner:
             self.scan(),
             query,
         )
+    

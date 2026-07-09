@@ -28,7 +28,7 @@ class ContextBuilder:
 
         summary = self.summarizer.summarize(
             [
-                document["content"]
+                self._format_document(document)
                 for document in documents
             ]
         )
@@ -38,3 +38,13 @@ class ContextBuilder:
             files=files,
             content=summary,
         )
+
+    def _format_document(self, document: dict) -> str:
+        header = f"Path: {document['path']}"
+        if document.get("symbol"):
+            header += f"\nSymbol: {document['symbol']}"
+            header += f"\nType: {document['chunk_type']}"
+            header += f"\nLines: {document['start_line']}-{document['end_line']}"
+        else:
+            header += "\nType: file"
+        return f"{header}\n\n{document['content']}"

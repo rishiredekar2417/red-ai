@@ -6,3 +6,4 @@ logging.basicConfig(
 )
 
 logger = logging.getLogger("red-ai")
+app_logger = logger

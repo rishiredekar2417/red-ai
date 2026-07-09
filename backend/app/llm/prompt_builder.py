@@ -44,11 +44,11 @@ CONVERSATION HISTORY
 PROJECT CONTEXT
 ========================
 
-Project Files:
+Relevant Files:
 
 {chr(10).join(ctx.files)}
 
-Project Summary:
+Relevant Chunks:
 
 {ctx.content}
 

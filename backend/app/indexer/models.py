@@ -20,3 +20,7 @@ class IndexedFile(BaseModel):
     imports: list[str]
 
     chunks: list[CodeChunk] = []
+
+    function_chunks: list[CodeChunk] = []
+
+    class_chunks: list[CodeChunk] = []

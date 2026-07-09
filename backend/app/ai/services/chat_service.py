@@ -1,5 +1,6 @@
 from app.ai.providers.provider_factory import ProviderFactory
 from app.ai.services.conversation_service import ConversationService
+from app.core.exceptions import ProviderError
 
 
 class ChatService:
@@ -14,8 +15,15 @@ class ChatService:
 
         self.conversation.add_user(prompt)
 
-        response = await self.provider.chat(self.conversation.history())
+        try:
+            response = await self.provider.chat(self.conversation.history())
+        except Exception as exc:
+            raise ProviderError(str(exc)) from exc
 
-        self.conversation.add_assistant(response["text"])
+        text = response.get("text") if isinstance(response, dict) else str(response)
+        if not text:
+            raise ProviderError("Provider returned an empty response")
 
-        return response["text"]
+        self.conversation.add_assistant(text)
+
+        return text

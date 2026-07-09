@@ -51,6 +51,7 @@ class ProjectIndexer:
             functions=functions,
             classes=classes,
             imports=imports,
+            chunks=function_chunks + class_chunks,
             function_chunks=function_chunks,
             class_chunks=class_chunks,
         )

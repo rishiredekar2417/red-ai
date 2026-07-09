@@ -1,11 +1,7 @@
 from openai import AsyncOpenAI
 
 from app.ai.providers.base_provider import BaseProvider
-from app.core.config import (
-    OPENAI_API_KEY,
-    OPENAI_MODEL,
-)
-api_key=settings.OPENAI_API_KEY
+from app.core.settings import settings
 
 
 class OpenAIProvider(BaseProvider):
@@ -14,9 +10,12 @@ class OpenAIProvider(BaseProvider):
         self.client = AsyncOpenAI(api_key=settings.OPENAI_API_KEY)
 
     async def chat(self, messages):
-
-        response = await self.client.responses.create(
-            model=OPENAI_MODEL, input=messages
+        response = await self.client.chat.completions.create(
+            model=settings.OPENAI_MODEL,
+            messages=messages,
+            temperature=settings.TEMPERATURE,
+            max_tokens=settings.MAX_TOKENS,
         )
 
-        return {"text": response.output_text, "raw": response}
+        return {"text": response.choices[0].message.content, "raw": response}
+

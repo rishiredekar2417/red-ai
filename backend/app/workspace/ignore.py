@@ -8,6 +8,7 @@ IGNORE_FOLDERS = {
     ".vscode",
     "dist",
     "build",
+    "knowledge",
 }
 
 IGNORE_EXTENSIONS = {

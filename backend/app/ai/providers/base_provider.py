@@ -17,4 +17,5 @@ class BaseProvider(ABC):
 
         Returns a standardized response.
         """
-        pass
+        raise NotImplementedError
+

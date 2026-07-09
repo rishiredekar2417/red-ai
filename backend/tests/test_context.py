@@ -30,3 +30,13 @@ def test_context_contains_content():
     context = builder.build("python")
 
     assert isinstance(context.content, str)
+
+
+def test_context_uses_chunk_metadata_when_available():
+
+    builder = ContextBuilder(PROJECT_ROOT)
+
+    context = builder.build("parse")
+
+    assert "Path:" in context.content
+    assert "Type:" in context.content

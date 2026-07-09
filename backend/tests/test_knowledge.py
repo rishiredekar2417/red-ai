@@ -22,11 +22,11 @@ def test_search_python():
 
     files = scanner.scan()
 
-    search = ProjectSearch(files)
+    search = ProjectSearch()
 
-    python_files = search.by_language("Python")
+    results = search.search(files, "test")
 
-    assert len(python_files) > 0
+    assert len(results) > 0
 
 
 def test_search_function():
@@ -35,6 +35,9 @@ def test_search_function():
 
     files = scanner.scan()
 
-    search = ProjectSearch(files)
+    search = ProjectSearch()
 
-    assert isinstance(search.by_function("scan"), list) 
+    results = search.search(files, "scan")
+
+    assert isinstance(results, list)
+    assert len(results) > 0

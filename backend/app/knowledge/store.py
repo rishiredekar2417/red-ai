@@ -49,3 +49,7 @@ class KnowledgeStore:
                 f,
                 indent=4,
             )
+
+    def update(self, data):
+        self.save(data)
+        return data

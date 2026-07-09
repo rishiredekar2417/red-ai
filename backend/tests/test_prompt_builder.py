@@ -22,3 +22,4 @@ def test_prompt_contains_context():
     prompt = builder.build("Explain")
 
     assert "PROJECT CONTEXT" in prompt
+    assert "Relevant Chunks" in prompt

@@ -1,23 +1,19 @@
-from app.core.config import PROVIDER
-
-# from app.ai.providers.openai_provider import OpenAIProvider
-from .ollama_provider import OllamaProvider
 from app.core.settings import settings
+from .ollama_provider import OllamaProvider
+from .openai_provider import OpenAIProvider
+
 
 class ProviderFactory:
 
     @staticmethod
     def create():
-        if settings.AI_PROVIDER == "ollama":
+        provider = settings.AI_PROVIDER.lower() if settings.AI_PROVIDER else settings.PROVIDER.lower()
+
+        if provider == "ollama":
             return OllamaProvider()
-    
-        if settings.PROVIDER == "openai":
+
+        if provider == "openai":
             return OpenAIProvider()
 
-        if settings.PROVIDER == "lmstudio":
-            return LMStudioProvider()
+        raise ValueError(f"Unknown provider: {provider}")
 
-        if settings.PROVIDER == "anthropic":
-            return ClaudeProvider()
-
-        raise ValueError(f"Unknown provider: {PROVIDER}")
